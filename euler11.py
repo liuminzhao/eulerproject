@@ -24,6 +24,7 @@ for i in range(20):
         if tmp>result:
             result=tmp
 
+
 print(result)
 
 for i in range(17):
