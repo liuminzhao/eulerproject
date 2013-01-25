@@ -19,3 +19,7 @@ for num in x:
     if isprime(tmp):
         print tmp
         break
+
+import sympy
+
+sympy.factorint(100)
