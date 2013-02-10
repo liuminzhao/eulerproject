@@ -27,3 +27,6 @@ sympy.factorint(100)
 # letter score
 for i in range(len(namelist)):
     total += (i + 1) * sum([ord(char) - 64 for char in namelist[i]])
+
+# gcd
+from fractions import gcd
