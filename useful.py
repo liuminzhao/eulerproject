@@ -16,7 +16,16 @@ def primesfrom2to(n):
             sieve[k*(k-2*(i&1)+4)/3::2*k] = False
     return numpy.r_[2,3,((3*numpy.nonzero(sieve)[0][1:]+1)|1)]
 
+def digitsum(n):
+    ans = 0
+    while 1:
+        ans += n%10
+        n /= 10
+        if n == 0:
+            return ans
 
+# faster than      return sum([int(one) for one in str(n)])
+    
 def isprime(x):
     return not [t for t in range(2,int(math.sqrt(x))+1) if not x%t]
 
