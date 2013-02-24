@@ -5,8 +5,8 @@ begin = time.time()
 def rad(n):
     base = sp.factorint(n)
     return np.prod(base.keys())
-
-radn = [(rad(n), n) for n in range(1, 100001)]
+limit = 100000
+radn = [(rad(n), n) for n in range(1, limit + 1)]
 
 a = sorted(radn)
 
