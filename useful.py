@@ -34,7 +34,7 @@ def isrprime(a, b):
     return True
 
 def isprime(x):
-    return not [t for t in range(2,int(math.sqrt(x))+1) if not x%t]
+    return not [t for t in range(2,int(np.sqrt(x))+1) if not x%t]
 
 import itertools
 
