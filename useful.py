@@ -16,6 +16,16 @@ def primesfrom2to(n):
             sieve[k*(k-2*(i&1)+4)/3::2*k] = False
     return numpy.r_[2,3,((3*numpy.nonzero(sieve)[0][1:]+1)|1)]
 
+import numpy
+def primesfrom3to(n):
+    """ Returns a array of primes, 3 <= p < n """
+    sieve = numpy.ones(n/2, dtype=numpy.bool)
+    for i in xrange(3,int(n**0.5)+1,2):
+        if sieve[i/2]:
+            sieve[i*i/2::i] = False
+    return 2*numpy.nonzero(sieve)[0][1::]+1
+##########
+
 def digitsum(n):
     ans = 0
     while 1:
